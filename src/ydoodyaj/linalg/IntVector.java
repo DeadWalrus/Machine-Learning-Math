@@ -4,20 +4,17 @@ import java.util.List;
 import java.util.ArrayList;
 public class IntVector implements Vector{
     private List<Integer> elements;
-    private int numElements;
 
     public IntVector(){
         this.elements = new ArrayList<>();
-        this.numElements = 0;
     }
     public IntVector(int numElements){
         this();
-        this.numElements = numElements;
+        this.elements = new ArrayList<>(numElements);
     }
     public IntVector(List<Integer> elementList){
         this();
         this.elements = elementList;
-        this.numElements = elementList.size();
     }
     @Override
     public void add(Vector v) {
@@ -49,6 +46,9 @@ public class IntVector implements Vector{
         return null;
     }
 
+    public int getNumElements(){
+        return this.elements.size();
+    }
     // Returns the ith element from this vector
     public int getVectorElement(int index){
         return (int)this.elements.get(index);

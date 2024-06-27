@@ -19,4 +19,6 @@ public interface Vector {
     // Calculate the cross product between this vector and vector v
     Vector crossProduct(Vector v);
 
+    // Return the number of elements in this vector
+    int getNumElements();
 }
